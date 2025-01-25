@@ -27,13 +27,26 @@ class SquareScreen extends StatelessWidget {
         backgroundColor: Colors.blue,
       ),
       body: Center(
-        child: Container(
-          width: 300,
-          height: 500,
-          decoration: BoxDecoration(
-            color: Colors.blue,
-            borderRadius: BorderRadius.circular(20),
-          ),
+        child: Stack(
+          alignment: Alignment.center,
+          children: [
+            Container(
+              width: 300,
+              height: 500,
+              decoration: BoxDecoration(
+                color: Colors.blue,
+                borderRadius: BorderRadius.circular(20),
+              ),
+            ),
+            const Text(
+              'Meu Aplicativo',
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 30,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ],
         ),
       ),
     );
